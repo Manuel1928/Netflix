@@ -27,12 +27,11 @@ st.title("Netflix APP")
 sidebar = st.sidebar
 agree=sidebar.checkbox("Mostrar todos los filmes?")
 nombre=sidebar.text_area("Titulo del filme:")
-a=nombre.swapcase()
 myname=sidebar.button("Buscar Filmes")
 di=sidebar.selectbox("Buscar por director:",datas['director'].unique())
 dire=sidebar.button("Filtrar director")
 if (myname):
-  filterbyname = load_data_byname(a)
+  filterbyname = load_data_byname(nombre)
   count_row = filterbyname.shape[0]
   st.write(f"Total names : {count_row}")
   st.dataframe(filterbyname)
