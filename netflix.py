@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-movies_data = '/content/movies.csv'
+movies_data = 'https://raw.githubusercontent.com/Manuel1928/Netflix/main/movies.csv'
 
 datas=pd.read_csv(movies_data,encoding="ISO-8859-1")
 
